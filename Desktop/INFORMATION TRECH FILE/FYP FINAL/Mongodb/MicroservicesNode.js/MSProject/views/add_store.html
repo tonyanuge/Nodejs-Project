@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <mata charset = "UTF-8">
+            <meta name = "viewport" content="width = device-width, initial-scale= 1.0">
+            <title>MSproject Application</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body>
+    <!--Header-->
+    <header id = "header">
+        <nav>
+            <div class = "container">
+                <div class ="text-center">
+                    <a href="/" class = "nav-brand text-dark"> Product Management System</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Header-->
+    <!--main-->
+        <main id = "site-main">
+            <div class = "container">
+                <div class = "box-nav d-flex justify-between">          
+                    <div class = "filer">
+                        <a href = "/"><i class = "fas fa-angle-bouble-left"></i>All Users</a>
+
+                    </div>
+                </div>
+                <div class =  "form-title text-center">
+                    <h2 class = "text-dark"><New Store</h2>
+                        <span class = "text-light">Create New Account</span>
+                </div>
+
+                <!--from handling-->
+                <form method = "POST" id = "update_store">
+                    <div class = "new_store">
+                        <div class = "form-group">
+                        <label for = "name" class = "text-light">Name</label>
+                        <input type = "hidden" name="id" value="">
+                        <input type = "text" name = "name" value = "" placeholder = "Tony Anuge">
+                    </div>
+                    <div class = "form-group">
+                        <label for = "Email" class = "text-light">Email</label>
+                        <input type = "text" name = "email" value = "" placeholder = "sample@yahoo.com">
+                    </div>
+                    <div class = "form group">
+                        <label for = "gender" class = "radio lable">Gender</label>
+                        <div class = "radio inline">
+                            <input type = "radio" id = "radio-2" name = "gender" value = "Male">
+                            <label for = "radio-2" class = "radio lable">Male</label>
+                        </div>  
+                        <div class = "radio inline">
+                            <input type = "radio" id = "radio-3"name = "gender" value = "Female">
+                            <label for = "radio-3" class = "radio lable">Female</label>
+                        </div> 
+                    </div>   
+                        <div class = "form group">
+                            <label for = "gender" class = "text-ligh">Status</label>
+                            <div class = "radio inline">
+                                <input type = "radio" id = "radio-4" name = "status" value = "Active">
+                                <label for = "radio-4" class = "radio lable">Active</label>
+    
+                            </div>  
+                            <div class = "radio inline">
+                                <input type = "radio" id = "radio-5" name = "Status" value = "Inactive">
+                                <label for = "radio-5" class = "text-ligh">Inactive</label>
+                            </div>                    
+                    </div>  
+                    <div class = "form-group">
+                        <button type = "Submit" class = "btn text-dark update">Save</button>
+                    </div>               
+                </form>
+            </div>
+        </main>
+    <!--/main-->
+</body>
+</html>

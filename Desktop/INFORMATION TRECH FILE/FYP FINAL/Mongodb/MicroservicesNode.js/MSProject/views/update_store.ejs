@@ -1,0 +1,80 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All stores</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update store</h2>
+            <span class="text-light">store the below form to Update an account</span>
+        </div>
+
+        <!-- add store form -->
+         <!-- form handling -->
+ <form method="POST" id="update_store">
+    <div class="new_store">
+        <div class="form-group">
+            <label for="type" class="text-light">Type</label>
+            <input type="hidden" name="id" value="<%= stores._id %>">
+            <input type="text" name="type" value="<%= stores.type %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="text" name="name" value="<%= stores.name%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="address" class="text-light">Address</label>
+            <input type="text" name="address" value="<%= stores.address%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="address2" class="text-light">Address2</label>
+            <input type="text" name="address2" value="<%= stores.address2%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="city" class="text-light">City</label>
+            <input type="text" name="city" value="<%= stores.city%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="state" class="text-light">State</label>
+            <input type="text" name="state" value="<%= stores.state%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="zip" class="text-light">Zip</label>
+            <input type="text" name="zip" value="<%= stores.zip%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="location" class="text-light">Location</label>
+            <input type="text" name="location" value="<%= stores.location%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="hours" class="text-light">Hours</label>
+            <input type="text" name="hours" value="<%= stores.hours%>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="services" class="text-light">Services/label>
+            <input type="text" name="services" value="<%= stores.services%>" placeholder="">
+        </div>
+        
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

@@ -1,0 +1,117 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Stores</a>
+           </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        
+            <div>
+                <div class = "search" >
+                    <div class="col">  
+                        <div class=" card card-body">              
+                    <input id="search-input" class="form-control" type="text">
+                </div>
+            </div>  
+
+                </div>
+            </div>
+
+            <!-- form handling -->
+            <table class="table table-striped">
+                <tr  class="bg-info">
+                    <th  data-colnanme="id" search-data=="desc">id </th>
+                    <th  class="bg-info" data-colname="name" search-data="desc">name </th>
+                    <th  data-colnanme="type" search-data=="desc">type</th>
+                    <th  data-colname="address" search-data=="desc">adress</th>
+                    <th  data-colname="address2" search-data=="desc">adress2 </th>
+                    <th  data-colname="city" search-data=="desc">city </th>
+                    <th  data-colname="state" search-data=="desc">state </th>
+                    <th  data-colname="zip" search-data=="desc">zip</th>
+                    <th  data-colname="location" search-data=="desc">location </th>
+                    <th  data-colname="hours" search-data=="desc">hours </th>
+                    <th  data-colname="services" search-data=="desc">services</th>
+                </tr>
+                <tbody id="myTable">
+                    
+                </tbody>
+            </table>
+              
+<script>
+    var myArray = [
+        {"id":1000,"type":"BigBox","name":"Mall of America","address":"340 W Market","address2":"","city":"Bloomington","state":"MN","zip":"55425","location":{"lat":44.85466,"lon":-93.24565},"hours":"Mon: 10-9:30; Tue: 10-9:30; Wed: 10-9:30; Thurs: 10-9:30; Fri: 10-9:30; Sat: 10-9:30; Sun: 11-7","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Hablamos Español","Camera Experience Shop ","Electronics Recycling","Magnolia Home Theater","Samsung Experience Shop","Windows Store"]},{"id":1002,"type":"BigBox","name":"Tempe Marketplace","address":"1900 E Rio Salado Pkwy","address2":"","city":"Tempe","state":"AZ","zip":"85281","location":{"lat":33.430729,"lon":-111.89966},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-10; Sat: 10-10; Sun: 10-8","services":["Windows Store","Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Electronics Recycling","Samsung Experience","Car & GPS Installation Services","Hablamos Español"]},{"id":1003,"type":"BigBox","name":"Lexington Park","address":"45235 Worth Ave.","address2":"","city":"California","state":"MD","zip":"20619","location":{"lat":38.29697,"lon":-76.512016},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Electronics Recycling","Car & GPS Installation Services","Samsung Experience Shop"]},{"id":1004,"type":"BigBox","name":"Trussville","address":"5072 Pinnacle Sq","address2":"","city":"Birmingham","state":"AL","zip":"35235","location":{"lat":33.605438,"lon":-86.642662},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Electronics Recycling","Samsung Experience Shop","Car & GPS Installation Services","Windows Store"]},{"id":1008,"type":"BigBox","name":"Vacaville","address":"1621 E Monte Vista Ave","address2":"","city":"Vacaville","state":"CA","zip":"95688","location":{"lat":38.367649,"lon":-121.96328},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Electronics Recycling","Hablamos Español","Car & GPS Installation Services","Magnolia Home Theater","Samsung Experience Shop","Windows Store"]},{"id":1009,"type":"BigBox","name":"Long Beach","address":"6310 E Pacific Coast Hwy","address2":"","city":"Long Beach","state":"CA","zip":"90803","location":{"lat":33.760353,"lon":-118.11414},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Electronics Recycling","Samsung Experience Shop","Car & GPS Installation Services","Magnolia Home Theater","Windows Store"]},{"id":1010,"type":"BigBox","name":"Clarksville","address":"1025 Veterans Pkwy","address2":"","city":"Clarksville","state":"IN","zip":"47129","location":{"lat":38.327175,"lon":-85.76461},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Windows Store","Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Electronics Recycling","Samsung Experience","Car & GPS Installation Services"]}, {"id":1011,"type":"BigBox","name":"Sepulveda and Rosecrans","address":"740 S Sepulveda Blvd","address2":"","city":"El Segundo","state":"CA","zip":"90245","location":{"lat":33.9051385,"lon":-118.3960826},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Best Buy For Business","Geek Squad Services","Best Buy Mobile","Apple Shop","Electronics Recycling","Windows Store","Samsung Experience","Sony Experience ","Car & GPS Installation Services","Magnolia Home Theater","Hablamos Español"]},{"id":1012,"type":"BigBox","name":"Bismarck","address":"1207 W Century Ave","address2":"","city":"Bismarck","state":"ND","zip":"58503","location":{"lat":46.829876,"lon":-100.81213},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 9-9; Sat: 9-9; Sun: 12-8","services":["Windows Store","Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Electronics Recycling","Best Buy Marine Powered by Geek Squad","Samsung Experience","LG Experience ","Car & GPS Installation Services"]},{"id":1013,"type":"BigBox","name":"Glen Allen","address":"9901 Brook Rd","address2":"","city":"Glen Allen","state":"VA","zip":"23059","location":{"lat":37.667957,"lon":-77.459908},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Electronics Recycling","Car & GPS Installation Services","Hablamos Español","Samsung Experience Shop","Windows Store"]},{"id":1014,"type":"BigBox","name":"Spanish Springs","address":"155 Los Altos Pkwy","address2":"","city":"Sparks","state":"NV","zip":"89436","location":{"lat":39.579536,"lon":-119.7412},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Electronics Recycling","Best Buy Marine Powered by Geek Squad","Car & GPS Installation Services","Magnolia Home Theater","Samsung Experience Shop"]},{"id":1015,"type":"BigBox","name":"Altoona","address":"1721 Osgood Dr","address2":"","city":"Altoona","state":"PA","zip":"16602","location":{"lat":40.490524,"lon":-78.382912},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Electronics Recycling","Car & GPS Installation Services","Samsung Experience Shop"]},{"id":1016,"type":"BigBox","name":"Kalispell","address":"2407 Highway 93 N","address2":"","city":"Kalispell","state":"MT","zip":"59901","location":{"lat":48.239506,"lon":-114.33124},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Electronics Recycling","Car & GPS Installation Services","Samsung Experience Shop"]},{"id":1017,"type":"BigBox","name":"San Angelo","address":"4325 Sunset Dr","address2":"","city":"San Angelo","state":"TX","zip":"76904","location":{"lat":31.435648,"lon":-100.50107},"hours":"Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-10; Sat: 10-10; Sun: 11-8","services":["Geek Squad Services","Best Buy Mobile","Best Buy For Business","Apple Shop","Electronics Recycling","Hablamos Español","Car & GPS Installation Services","Samsung Experience Shop"]},
+    ]
+    
+    
+    $('#search-input').on('keyup', function(){
+         var value = $(this).val()
+         console.log('value:', value)
+         var data = searchTable(value, myArray)
+         buildTable(data)
+        // text = text.substring(0, text.length - 1);
+    })
+
+    buildTable(myArray)
+
+    function searchTable(value, data){
+        var filteredData =  []
+
+        for (var i = 0; i < data.length; i++){
+            value = value.toLowerCase()
+            var name = data[i].name.toLowerCase()
+
+            if (name.includes(value)){
+                filteredData.push(data[i])
+
+            }
+
+        }
+
+        return filteredData
+}    
+       
+     
+        
+        function buildTable(data){
+            var table = document.getElementById('myTable')
+            table.innerHTML = ''
+            for (var i = 0; i < data.length; i++){
+
+                var row = `<tr>
+                                <td>${data[i].type} </td>
+                                <td>${data[i].name}</td>
+                                <td>${data[i].birthdate}</td>
+                                <td>${data[i].adress}</td>
+                                <td>${data[i].adress2}</td>
+                                <td>${data[i].city}</td>
+                                <td>${data[i].state}</td>
+                                <td>${data[i].zip}</td>
+                                <td>${data[i].location}</td>
+                                <td>${data[i].hours}</td>
+                                <td>${data[i].services}</td>
+                        </tr>`
+                 table.innerHTML += row
+                }
+        }
+
+</script>
+
+
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

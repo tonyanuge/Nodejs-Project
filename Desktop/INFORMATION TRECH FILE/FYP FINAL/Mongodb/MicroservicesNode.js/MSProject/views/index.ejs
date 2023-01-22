@@ -1,0 +1,52 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-store" class="border-shadow">
+                    <span class="text-gradient">Add Store <i class="fas fa-store"></i></span>
+                </a>
+                <br>
+        </div>
+            <form class = "" action= "/search-store" method="POST">
+                <button <span class="text-gradient">Search </span> <i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>type</th>
+                            <th>name</th>
+                            <th>address</th>
+                            <th>address2</th>
+                            <th>city</th>
+                            <th>state</th>
+                            <th>zip</th>
+                            <th>location</th>
+                            <th>hours</th>
+                            <th>services</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

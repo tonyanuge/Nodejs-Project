@@ -1,0 +1,33 @@
+Name:Tony Anuge
+Student Number: C18731921
+
+
+Features:
+
+User Store Management System
+
+
+To connect and view database table.
+
+
+Step 1: On your code editor Run npm start in terminal. ...\MicroservicesNode.js\MSProject>
+	you will get a message running in port@1.0.0
+
+Step 2: Enter localhost:3000 on your browser to view the index page containing the database table.
+
+Step 3: To Navigate pages use the add Store icon. this will prompt you to the add new store page.
+
+Step 4: To delete or remove store from table. On the Index page, use the X icon the right side of the table.
+	You will be alerted if you want to delete this record.
+
+Step 5: To edit or make changes to table. Use the pencil icon, this will prompt you to the edit new store page
+
+Step 6: To search for items on the table. Use the search icon. This will take you to the serach page.
+
+Step 7: U se the about icon to view about store.
+
+
+
+Reference:
+https://github.com/akashyap2013/CRUD_Application_Node
+https://www.w3schools.com/

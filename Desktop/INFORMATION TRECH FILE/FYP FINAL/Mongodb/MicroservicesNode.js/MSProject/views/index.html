@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <mata charset = "UTF-8">
+            <meta name = "viewport" content="width = device-width, initial-scale= 1.0">
+            <title>MSproject Application</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body>
+
+
+    <!--Header-->
+    <header id = "header">
+        <nav>
+            <div class = "container">
+                <div class ="text-center">
+                    <a href="/" class = "nav-brand text-dark"> Store Management System</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Header-->
+    <!--main-->
+        <main id = "site-main">
+            <div class = "container">
+                <div class = "box-nav d-flex justify-between">
+                    <a href="/add-store" class = "border-shadow>
+                        <span class = "text-gradient">New Store<i class="fa-thin fa-store"></i></span>
+                    </a>
+                </div>
+
+                <!--from handling-->
+                <form action = "/" method = "POST">
+                    <table class = "table">
+                        <thead class = "thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>type</th>
+                                <th>name</th>
+                                <th>address</th>
+                                <th>address2</th>
+                                <th>city</th>
+                                <th>state</th>
+                                <th>zip</th>
+                                <th>location</th>
+                                <th>hours</th>
+                                <th>services</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>1</td>
+                            <td>Product</td>
+                            <td>Name</td>
+                            <td>Address</td>
+                            <td>City</td>
+                            <td>
+                                <a href="#" class = "btw border-shadow update">
+                                <span class = "text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a class = "btw border-shadow delete">
+                                    <span class = "text-gradient"><i class="fas fa-times"></i></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </main>
+    <!--/main-->
+</body>
+</html>

@@ -1,0 +1,49 @@
+ <!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->  
+  <main id = "site-main">
+    <div class="section section-basic">
+      <div class="container">
+            <h2>About</h2>
+            <hr color="orange"> 
+      <br>
+      <div class="col-md-12">
+      <br>
+  
+      <div class="panel panel-success panel-size-custom">
+              <div class="panel-body">
+<div class="about-section">
+
+<p>This is a node CRUD application with express and mongodb for this project. Node JS with MongoDB CRUD Operations: MongoDB with Node.js Setup
+  The operations were carried out by: Inserting a Record dataset of stores into GridDB - picks a database named intro and a collection named quotes after establishing a connection to a MongoDB instance. The document is subsequently added to the collection, and the results are returned as an HTTP response.
+  The.get() method is then used to retrieve a document from MongoDB, update MongoDB documents (the "U" in CRUD:), and delete a record using Node.js.</p>
+  <br>
+   <p>To add new store I used the add store form in a partial form called forms.ejs and pass my post request url in the router which was added to method form action.</p>
+   <br>
+   <br>
+   <h3>Application weaknesses </h3>
+   <br>
+   <p> Due of my lack of javascript expertise. Implementing a search directly from the user table to view a particular store on list without redirecting the user to another page.</p>
+    <br>
+    <h3> Alternative Implementation </h3>
+    <br>
+    <p> Implementing an onclick to table content for fetching a single record when a user clicks on a single item on table list. This could have been an alternative functionality to include. </p>
+    <p> Another option would have been adding a map link to all store lactions.</p>
+    
+    <br>
+
+  
+  </div>
+
+
+
+</div>
+<br><br><br><br>
+
+</main>
+ <!-- /Main Site -->  
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

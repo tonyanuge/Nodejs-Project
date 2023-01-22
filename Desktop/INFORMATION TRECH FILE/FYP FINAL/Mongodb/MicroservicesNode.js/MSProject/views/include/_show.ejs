@@ -1,0 +1,23 @@
+<% for(var i = 0; i < stores.length; i++) { %>
+    <tr class="tbl-stores">
+        <td><%= i + 1 %></td>
+        <td><%= stores[i].type %></td>
+        <td><%= stores[i].name %></td>
+        <td><%= stores[i].adress %></td>
+        <td><%= stores[i].adress2 %></td>
+        <td><%= stores[i].city %></td>
+        <td><%= stores[i].state %></td>
+        <td><%= stores[i].zip %></td>
+        <td><%= stores[i].location %></td>
+        <td><%= stores[i].hours %></td>
+        <td><%= stores[i].services %></td>
+        <td>
+            <a href="/update-store?id=<%= stores[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= stores[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

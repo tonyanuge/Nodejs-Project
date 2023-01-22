@@ -1,0 +1,117 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <style>
+            th{ 
+                cursor: pointer;
+                color:#fff;
+                    }
+        </style>
+            <div>
+                <div class = "search" >
+                    <div class="col">  
+                        <div class=" card card-body">              
+                    <input id="search-input" class="form-control" type="text">
+                </div>
+            </div>  
+
+                </div>
+            </div>
+
+            <!-- form handling -->
+            <table class="table table-striped">
+                <tr  class="bg-info">
+                    <th  class="bg-info" data-colname="name" search-datae="desc">name &#9650</th>
+                    <th  data-colnanme="type" search-data=="desc">type &#9650</th>
+                    <th  data-colname="" search-data=="desc">adress &#9650</th>
+                    <th  data-colname="" search-data=="desc">adress2 &#9650</th>
+                    <th  data-colname="" search-data=="desc">city &#9650</th>
+                    <th  data-colname="" search-data=="desc">state &#9650</th>
+                    <th  data-colname="" search-data=="desc">zip &#9650</th>
+                    <th  data-colname="" search-data=="desc">location &#9650</th>
+                    <th  data-colname="" search-data=="desc">hours &#9650</th>
+                    <th  data-colname="" search-data=="desc">services &#9650</th>
+                </tr>
+                <tbody id="stores">
+                    
+                </tbody>
+            </table>
+              
+<script>
+    var myArray = [
+        { 'type' :  'BigBox' , 'name' : 'Mall of America'  , 'address' : ''  , 'address2' : '' , city : 'Bloomington' , 'state' : 'MN' , 'zip' : '' , 'location' : '' , 'hours' : '' , 'services' : 'Best Buy Mobile' },
+        {'type' :  'BigBox' , 'name' : 'Tempe Marketplace'  , 'address' : ''  , 'address2' : '' , city : 'Tempe' , 'state' : 'AZ' , 'zip' : '' , 'location' : '' , 'hours' : '' , 'services' : 'Best Buy Mobile' },
+        { 'type' :  'BigBox' , 'name' : 'Trussville'  , 'address' : ''  , 'address2' : '' , city : 'Birmingham' , 'state' : 'AL' , 'zip' : '' , 'location' : '' , 'hours' : '' , 'services' : 'Best Buy Mobile' },
+        { 'type' :  'BigBox' , 'name' : 'Vacaville'  , 'address' : ''  , 'address2' : '' , city : 'Vacaville' , 'state' : 'CA' , 'zip' : '' , 'location' : '' , 'hours' : '' , 'services' : 'Best Buy Mobile' },
+    
+    ]
+
+    $('search-input').on('keyup', function(){
+         var column = $(this).val()
+         console.log('value:', value)
+         var data = searchTable(value, myArray)
+        // text = text.substring(0, text.length - 1);
+    })
+    
+    buildTable(myArray)
+
+    function searchTable(value, ){
+        var filteredData =  []
+
+        for (var i = 0; i < data.length; i++){
+            value = value.toLowerCase()
+            var name = data[i].name.toLowerCase()
+
+            if (name.includes(value)){
+                filteredData.push(data[i])
+
+            }
+
+        }
+
+        return filteredData
+}    
+           
+        
+        function buildTable(data){
+    var table = document.getElementById('stores')
+    table.innerHTML = ''
+    for (var i = 0; i < data.length; i++){
+
+        var row = `<tr>
+                        <td>${data[i].type} </td>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].birthdate}</td>
+                        <td>${data[i].adress}</td>
+                        <td>${data[i].adress2}</td>
+                        <td>${data[i].city}</td>
+                        <td>${data[i].state}</td>
+                        <td>${data[i].zip}</td>
+                        <td>${data[i].location}</td>
+                        <td>${data[i].hours}</td>
+                        <td>${data[i].services}</td>
+                   </tr>`
+        table.innerHTML += row
+    }
+}
+ 
+    </script>
+        
+
+                    </thead>
+                    <tbody>
+                        
+
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+</body>
+
